@@ -1,4 +1,8 @@
-import TamboDemo from "../components/TamboDemo";
+import dynamic from "next/dynamic";
+
+const TamboDemo = dynamic(() => import("../components/TamboDemo"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
